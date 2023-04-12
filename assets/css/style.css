@@ -1,0 +1,224 @@
+@font-face {
+    font-family: Karla;
+    src: url(../font/Karla-VariableFont_wght.ttf);
+}
+
+:root {
+    --maincolor: #323A45;
+    --maincolor2: #848484;
+    --mainmargin: 2rem;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* GENERAL STYLES */
+html {
+    font-family: Karla, sans-serif;
+    font-size: 62.5%;
+}
+
+.wrapper {
+    padding: 5rem;
+}
+
+img {
+    max-width: 100%;
+}
+
+h1 {
+    font-size: 2.5rem;
+}
+
+h1:hover {
+    color: var(--maincolor);
+    text-shadow: 1px 1px black;
+}
+
+h2, h3 {
+    font-size: 2rem;
+    color: var(--maincolor);
+    margin-bottom: 0.8rem;
+}
+
+footer h2 {
+    margin-bottom: 3rem;
+}
+
+p {
+    font-size: 1.5rem;
+    color: var(--maincolor2);
+}
+
+.italic {
+    font-style: italic;
+}
+
+footer p, header a {
+    color: black;
+}
+
+footer .grey {
+    color: var(--maincolor2);
+}
+
+a {
+    text-decoration: none;
+}
+
+nav a {
+    font-size: 1.5rem;
+    padding: 0 15px;
+    font-weight: 700;
+}
+
+nav a:hover {
+    color: var(--maincolor);
+    text-shadow: 0.1px 0.1px black;
+}
+
+footer a {
+    font-size: 1.5rem;
+    color: black;
+    font-weight: 700;
+    line-height: 200%;
+}
+
+/* HEADER */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: var(--mainmargin);
+}
+
+.sandwich {
+    display: none;
+}
+
+
+/* MAIN */
+main {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 3rem;
+    margin-bottom: 5rem;
+}
+
+/* SECTIONs */
+section {
+    margin-bottom: var(--mainmargin);
+}
+
+main section img {
+    margin-bottom: var(--mainmargin);
+}
+
+main section img:hover {
+    filter: opacity(0.5);
+}
+
+.big {
+    grid-column: 1 / 4;
+}
+
+article {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* FOOTER */
+footer section {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    gap: 20px;
+    margin-bottom: 5rem;
+}
+
+section .shop {
+    grid-column: 1 / 3;
+}
+
+section .contact {
+    grid-column: 3 / 4;
+}
+
+section .newsletter {
+    grid-column: 4 / 6;
+}
+
+section .find-us {
+    grid-column: 6 / 7;
+}
+
+.contact a, .find-us a {
+    display: block;
+}
+
+
+/* NEWSLETTER.html */
+.newsletter-page {
+    padding-top: 25vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.newsletter-page img, .newsletter-page h1, .newsletter-page p {
+    margin-bottom: 2rem;
+}
+
+.newsletter-page input {
+    margin-bottom: 1.2rem;
+    text-align: center;
+}
+
+input[type="email"] {
+    padding: 1rem 8rem;
+}
+
+input[type="submit"] {
+    color: white;
+    background-color: var(--maincolor2);
+    padding: 1rem 2rem;
+}
+
+
+@media only screen and (max-width: 600px) {
+    h2, h3 {
+        font-size: 1.5rem;
+    }
+    
+    .test {
+        display: none;
+    }
+
+    .sandwich {
+        display: flex;
+        width: 35px;
+        height: 35px;
+        flex-wrap: wrap;
+    }
+
+    .sandwich div {
+        background-color: black;
+        height: 0.4rem;
+        width: 100%;
+    }
+    
+    main {
+        display: flex;
+        flex-direction: column;
+    }
+ 
+    footer section {
+        display: flex;
+        flex-direction: column;
+    }
+}
+
